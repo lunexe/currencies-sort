@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>CurrenciesSort</title>
+    <link rel="stylesheet" href="style.css"
+    <title>Sort_Test</title>
 </head>
 <body>
-    
+    <div class="container">
+        <h2>Currencies Sort</h2>
+        <!-- Форма для ввода исходного массива данных -->
+        <form id="sourceDataForm">
+            <label for="sourceDataInput">Provider's supported currencies:</label>
+            <input type="text" id="sourceDataInput" name="sourceDataInput" placeholder="currencies-allowed">
+        </form>
+        <!-- Форма для ввода массива данных для сравнения -->
+        <form id="compareDataForm">
+            <label for="compareDataInput">Requested currencies:</label>
+            <input type="text" id="compareDataInput" name="compareDataInput" placeholder="Ex.USD, EUR, BYN...">
+        </form>
+        <!-- Окно для отображения данных, которых нет во втором массиве -->
+        <div>
+            <h3>Results</h3>
+            <textarea id="resultTextarea" readonly></textarea>
+        </div>
+        <button id="compareButton">Do It!</button>
+    </div>
+    <script src="script.js" type="module"></script>
 </body>
 </html>
