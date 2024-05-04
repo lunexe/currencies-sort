@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.svg" type="image/x-icon">
+    <title>Sort_V1.0.1</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Currencies Sort</h2>
+        <form id="sourceDataForm">
+            <label for="sourceDataInput">Provider's supported currencies:</label>
+            <input type="text" id="sourceDataInput" name="sourceDataInput" placeholder="currencies-allowed">
+        </form>
+        <form id="compareDataForm">
+            <label for="compareDataInput">Requested currencies:</label>
+            <input type="text" id="compareDataInput" name="compareDataInput" placeholder="Ex.USD, EUR, BYN...">
+        </form>
+        <button id="compareButton">Do It!</button>
+        <div>
+            <h3>Results</h3>
+            <textarea id="resultTextarea" readonly></textarea>
+        </div>
+        <button id="copyButton">Ctrl-C</button>
+    </div>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
