@@ -15,3 +15,18 @@ document.getElementById('copyButton').addEventListener('click', function() {
     document.execCommand('copy');
     alert('Copied!');
 });
+/* Tab select
+function openTab(tabName) {
+    var i, tabcontent, navlinks;
+    tabcontent = document.getElementsByClassName("tab");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    navlinks = document.getElementsByClassName("nav__link");
+    for (i = 0; i < navlinks.length; i++) {
+        navlinks[i].className = navlinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    event.currentTarget.className += " active";
+}
+*/

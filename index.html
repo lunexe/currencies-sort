@@ -6,11 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="icon.svg" type="image/x-icon">
-    <title>Sort_V1.0.1</title>
+    <title>Sort</title>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <div class="header__inner">
+                <nav class="nav">
+                    <a class="nav__link" href="">Currencies Sort</a>
+                    <a class="nav__link" href="">Beta</a>
+                </nav>
+            </div>
+        </div>
+    </header>
     <div class="container">
-        <h2>Currencies Sort</h2>
+        <h2></h2>
         <form id="sourceDataForm">
             <label for="sourceDataInput">Provider's supported currencies:</label>
             <input type="text" id="sourceDataInput" name="sourceDataInput" placeholder="currencies-allowed">
@@ -25,6 +35,11 @@
             <textarea id="resultTextarea" readonly></textarea>
         </div>
         <button id="copyButton">Ctrl-C</button>
+        <footer>
+            <div class="footer_container">
+                <h3>V 1.0.1</h3>
+            </div>
+        </footer>
     </div>
     <script src="script.js" type="module"></script>
 </body>
