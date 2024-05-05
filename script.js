@@ -1,27 +1,21 @@
 document.getElementById("compareButton").addEventListener("click", function () {
-  const regex = /[a-zA-Z]+/g;
+    const regex = /[a-zA-Z]+/g;
 
-  const sourceData = document
-    .getElementById("sourceDataInput")
-    .value.split(" ")
-    .map((item) => String(item.match(regex)).toUpperCase());
-  const compareData = document
-    .getElementById("compareDataInput")
-    .value.split(" ")
-    .map((item) => String(item.match(regex)).toUpperCase());
+    const sourceData = document.getElementById("sourceDataInput").value.split(" ").map((item) => String(item.match(regex)).toUpperCase());
+    const compareData = document.getElementById("compareDataInput").value.split(" ").map((item) => String(item.match(regex)).toUpperCase());
 
-  const result = sourceData.filter((item) => compareData.includes(item));
-  result.sort();
+    const result = sourceData.filter((item) => compareData.includes(item));
+    result.sort();
 
-  const resultTextarea = document.getElementById("resultTextarea");
-  resultTextarea.value = result.join(", ");
+    const resultTextarea = document.getElementById("resultTextarea");
+    resultTextarea.value = result.join(", ");
 });
 
 document.getElementById("copyButton").addEventListener("click", function () {
-  const resultTextarea = document.getElementById("resultTextarea");
-  resultTextarea.select();
-  document.execCommand("copy");
-  alert("Copied!");
+    const resultTextarea = document.getElementById("resultTextarea");
+    resultTextarea.select();
+    document.execCommand("copy");
+    alert("Copied!");
 });
 /* Tab select
 function openTab(tabName) {
@@ -38,10 +32,3 @@ function openTab(tabName) {
     event.currentTarget.className += " active";
 }
 */
-
-let text = "Здесь WWW текст, в котором есть цифры и специальные символы!";
-
-let regex = /[a-zA-Z]+/g;
-let result = text.match(regex);
-
-console.log(result);
