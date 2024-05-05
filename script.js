@@ -30,3 +30,18 @@ function openTab(tabName) {
     event.currentTarget.className += " active";
 }
 */
+/* Version info */
+// Open
+function showDialog() {
+    var modal = document.getElementById('myModal');
+    modal.style.display = "block";
+}
+
+// Close
+function closeDialog() {
+    var modal = document.getElementById('myModal');
+    modal.style.display = "none";
+}
+
+// Click
+document.getElementById('footerContainer').addEventListener('click', showDialog);
