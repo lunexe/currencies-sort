@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Sorting</title>
+</head>
+<body>
+    <div>
+        <h2>Enter Data</h2>
+        <form id="dataForm">
+            <label for="sourceDataInput">Enter</label>
+            <input type="text" id="sourceDataInput" name="sourceDataInput" placeholder="Enter source data...">
+        </form>
+        <button id="compareButton">Do It</button>
+    </div>
+
+    <div>
+        <h2>Result</h2>
+        <textarea id="resultTextarea" readonly></textarea>
+    </div>
+
+    <a href="index.html">Back</a>
+    
+    <script>
+        document.getElementById("compareButton").addEventListener("click", function () {
+
+    const sourceData = document.getElementById("sourceDataInput").value.toLowerCase().split(/\s*,\s*/).map(item => item.charAt(0).toUpperCase() + item.slice(1));
+    sourceData.sort();
+
+    const result = sourceData.join(", ");
+
+    const resultTextarea = document.getElementById("resultTextarea");
+    resultTextarea.value = result;
+});
+
+    </script>
+</body>
+</html>

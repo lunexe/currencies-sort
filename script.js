@@ -32,7 +32,7 @@ function openTab(tabName) {
     event.currentTarget.className += " active";
 }
 */
-/* Version info */
+/* Version info 
 // Open
 function showDialog() {
     var modal = document.getElementById('myModal');
@@ -47,3 +47,4 @@ function closeDialog() {
 
 // Click
 document.getElementById('footerContainer').addEventListener('click', showDialog);
+*/
